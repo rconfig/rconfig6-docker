@@ -3,7 +3,7 @@ version: '3.8'
 networks:
   rconfig6Network:
     driver: bridge
-    
+
 services:
   mariadb:
     image: mariadb:10.8
@@ -50,10 +50,13 @@ services:
   horizon:
     container_name: rconfig6-horizon-supervisor
     build:
-      context: ./cron
+      context: ./horizon
+    ports:
+        - '8081:80'
     volumes:
       - ./src:/var/www/html/rconfig6
     restart: always
+    env_file: .env
     networks:
     - rconfig6Network
     depends_on:
