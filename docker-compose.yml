@@ -1,0 +1,60 @@
+version: '3.8'
+
+networks:
+  rconfig6Network:
+
+services:
+  mariadb:
+    image: mariadb:10.8
+    container_name: rconfig6-mariadb
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - 3307:3306
+    networks:
+    - rconfig6Network
+
+  php-apache:
+    container_name: rconfig6-php-apache
+    build:
+      context: ./php
+    ports:
+        - '8080:80'
+    volumes:
+      - ./src:/var/www/html/rconfig6
+      - ./apache/default.conf:/etc/apache2/sites-enabled/000-default.conf
+    env_file: .env
+    depends_on:
+      - mariadb
+    networks:
+    - rconfig6Network
+  
+  cronjob:
+    container_name: rconfig6-cronjob
+    build:
+      context: ./cron
+    volumes:
+      - ./src:/var/www/html/rconfig6
+    restart: always
+    networks:
+    - rconfig6Network
+    depends_on:
+      - php-apache
+
+  horizon:
+    container_name: rconfig6-horizon-supervisor
+    build:
+      context: ./cron
+    volumes:
+      - ./src:/var/www/html/rconfig6
+    restart: always
+    networks:
+    - rconfig6Network
+    depends_on:
+      - php-apache

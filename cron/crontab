@@ -1,0 +1,2 @@
+* * * * * cd /var/www/laravel_docker && /usr/local/bin/php artisan schedule:run >> /var/log/cron.log 2>&1
+# An empty line is required at the end of this file for a valid cron file.
