@@ -26,6 +26,12 @@ https://github.com/mohammadain/laravel-docker-cron/blob/master/Dockerfile -->
     ·
     <a href="https://github.com/rconfig/-rconfig6-docker/#setup">Installation</a>
     ·
+    <a href="https://github.com/rconfig/-rconfig6-docker/#usage">Usage</a>
+    ·
+    <a href="https://github.com/rconfig/-rconfig6-docker/#contributing">Contributing</a>
+    ·
+    <a href="https://github.com/rconfig/-rconfig6-docker/#license">License</a>
+    ·
     <a href="https://github.com/rconfig/-rconfig6-docker/#support">Support</a>
   </p>
 </div>
@@ -149,6 +155,8 @@ docker-compose up --build
 
 <!-- USAGE EXAMPLES -->
 
+<a name="usage"></a>
+
 ## Usage
 
 The default port for the web app is 8080. So go ahead and login to yourhostname.domain.com:8080 with the rConfig default creds per the documentation.
@@ -158,6 +166,8 @@ _Please refer to the [Documentation](https://www.rconfig.com/docs)_
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
+
+<a name="contributing"></a>
 
 ## Contributing
 
@@ -176,6 +186,8 @@ Don't forget to give the project a star! Thanks again!
 
 <!-- LICENSE -->
 
+<a name="license"></a>
+
 ## License
 
 This code base for docker compose is distributed under the MIT License. See `LICENSE.txt` for more information.
@@ -183,3 +195,9 @@ This code base for docker compose is distributed under the MIT License. See `LIC
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- https://github.com/othneildrew/Best-README-Template/blob/master/README.md -->
+
+<a name="support"></a>
+
+## Support
+
+Although we provide this code free and open source, rConfig v6 is based on a professional subscription arrangement. You may open issues in the issue section here at githunb, but rConfig Professional subscribers should open a ticket via our normal support channels.
