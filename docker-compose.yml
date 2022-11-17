@@ -10,7 +10,6 @@ services:
     restart: unless-stopped
     environment:
       MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-      MYSQL_DATABASE: ${DB_DATABASE}
       MYSQL_USER: ${DB_USERNAME}
       MYSQL_PASSWORD: ${DB_PASSWORD}
     volumes:
@@ -58,3 +57,12 @@ services:
     - rconfig6Network
     depends_on:
       - php-apache
+
+  redis:
+    image: redis:alpine
+    container_name: rconfig6-redis
+    restart: unless-stopped
+    ports:
+      - 7000:6379
+    networks:
+      - rconfig6Network

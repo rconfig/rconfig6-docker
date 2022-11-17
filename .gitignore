@@ -1,2 +1,3 @@
 src.old/*
 .env
+dockerkillall.sh
