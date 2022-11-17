@@ -190,7 +190,7 @@ Don't forget to give the project a star! Thanks again!
 
 ## License
 
-This code base for docker compose is distributed under the MIT License. See `LICENSE.txt` for more information.
+This code base for this repository's code is distributed under the MIT License. See `LICENSE.txt` for more information. rConfig v6 is excluded from this license and repository.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
