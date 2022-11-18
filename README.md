@@ -95,13 +95,13 @@ Your OS will need `git` installed to clone this repo. Internet access for the ho
 2. Create top level .env file
 
    ```sh
+   cd rconfig6-docker
    cp .env.example .env
    ```
 
 3. Edit the .env file with your DB and other parameters
 
    ```sh
-   cd rconfig6-docker
    vim .env
    ```
 
@@ -185,6 +185,33 @@ If you are uncertain about any of the above, the most important items to change 
 When troubleshooting issues, the following commands are useful.
 `docker ps -a`
 `docker logs CONTAINERNAME`
+
+#### Disk or storage permissions issues
+
+If you have permissions issues, such as errors that rConfig cannot write to the storage directory, follow these steps.
+
+1. Login to the php-apache container
+
+   ```sh
+   docker-compose exec php-apache /bin/bash
+   ```
+
+2. View the users list and find the id for the `www-data` account
+
+   ```sh
+   more /etc/passwd | grep www
+   ```
+
+3. The output should be similar to this
+
+   ```sh
+   www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+   ```
+
+4. Simply apply the correct permissions to the `persistentdata` directory
+   ```sh
+   chown -R 33 persistentdata/
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
