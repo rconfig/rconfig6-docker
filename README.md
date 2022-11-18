@@ -83,7 +83,7 @@ Your OS will need `git` installed to clone this repo. Internet access for the ho
 
    ```sh
    cd /var/www/html
-   git clone https://github.com/rconfig/-rconfig6-docker.git
+   git clone https://github.com/rconfig/rconfig6-docker.git
    ```
 
 2. Create top level .env file
