@@ -74,8 +74,14 @@ Some prerequisites are needed before you get started.
   - Any latest version of CentOS, RHEL, Rocky or Ubunut
 - Docker
   - Any latest version of Docker or Docker-CE
+  - Any latest version of Docker Compose
 
 Your OS will need `git` installed to clone this repo. Internet access for the host VM is assumed also - at least to github and rconfig.com.
+
+#### Useful URLS
+
+- [Docker installation for CentOS/ Rocky](https://docs.docker.com/engine/install/centos/)
+- [Manual Docker Compose installation for CentOS/ Rocky](https://docs.docker.com/compose/install/other/) (useful incase previous does not install it )
 
 ### Installation
 
@@ -125,11 +131,11 @@ Your OS will need `git` installed to clone this repo. Internet access for the ho
 
 If you are uncertain about any of the above, the most important items to change are the DB_PASSWORD and the RCONFIG_API_TOKEN
 
-4. Bring up the containers
+4. Bring up the containers. THis time we remove the Horizon container from the build as the application init is not complete so will throw errors. (This will take a few minutes the first time)
 
-```sh
-docker-compose up --build
-```
+   ```sh
+   docker-compose up --scale horizon=0 -d --build
+   ```
 
 5. Once the comtainers are up and running with no errors from the previous output,
    login to the php-apache container
