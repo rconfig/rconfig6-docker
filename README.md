@@ -162,6 +162,30 @@ If you are uncertain about any of the above, the most important items to change 
    envoy run deploy --apitoken=$RCONFIG_API_TOKEN
    ```
 
+9. Once the installation completes with no errors, exit the container, bring everything down, and start all containers up.
+
+   ```sh
+   exit
+   docker-compose down
+   docker-compose up -d --build
+   ```
+
+10. your final output from the previous step should look like this
+
+   ```sh
+   [+] Running 6/6
+   ⠿ Network rconfig6-docker_rconfig6Network  Created       0.3s
+   ⠿ Container rconfig6-redis                 Started       0.6s
+   ⠿ Container rconfig6-mariadb               Started       0.7s
+   ⠿ Container rconfig6-php-apache            Started       1.1s
+   ⠿ Container rconfig6-horizon-supervisor    Started       1.6s
+   ⠿ Container rconfig6-cronjob               Started       1.6s
+   ```
+
+When troubleshooting issues, the following commands are useful. 
+`docker ps -a`
+`docker logs CONTAINERNAME`
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- USAGE EXAMPLES -->
