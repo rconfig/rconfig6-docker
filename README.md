@@ -95,6 +95,11 @@ Your OS will need `git` installed to clone this repo. Internet access for the ho
 3. Edit the .env file with your DB and other parameters
 
    ```sh
+   cd rconfig6-docker
+   vim .env
+   ```
+
+   ```sh
    APP_URL=somehostname.yourdomain.com
    APP_PORT=8080
 
