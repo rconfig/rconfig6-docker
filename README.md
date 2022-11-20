@@ -42,7 +42,7 @@ https://github.com/mohammadain/laravel-docker-cron/blob/master/Dockerfile -->
 
 ## Intro
 
-rConfig v6 is an enterprise grade Network Configuration Management (NCM) software package with superior NCM features and capabilities to help you easily manage configurations on large and small heterogenous networks. rConfig v6 is our flagship professional version of rCconfig aimed at high value networks and business operations. rConfig v6 runs nativley on many variants of Linux. Within this repo, we have developed docker compose files and related artifacts to allow our customers run rConfig v6 within a Docker environment.
+rConfig v6 is an enterprise grade Network Configuration Management (NCM) software package with superior NCM features and capabilities to help you easily manage configurations on large and small heterogenous networks. rConfig v6 is our flagship professional version of rConfig aimed at high value networks and business operations. rConfig v6 runs natively on many variants of Linux. Within this repo, we have developed docker compose files and related artifacts to allow our customers run rConfig v6 within a Docker environment.
 
 Supported OS
 
@@ -71,7 +71,7 @@ We have made it super easy to get started with rConfig v6 on Docker. Follow the 
 Some prerequisites are needed before you get started.
 
 - OS
-  - Any latest version of CentOS, RHEL, Rocky or Ubunut
+  - Any latest version of CentOS, RHEL, Rocky or Ubunutu
 - Docker
   - Any latest version of Docker or Docker-CE
   - Any latest version of Docker Compose
@@ -131,7 +131,7 @@ Your OS will need `git` installed to clone this repo. Internet access for the ho
 
 If you are uncertain about any of the above, the most important items to change are the DB_PASSWORD and the RCONFIG_API_TOKEN
 
-4. Bring up the containers. THis time we remove the Horizon container from the build as the application init is not complete so will throw errors. (This will take a few minutes the first time)
+4. Bring up the containers. This time we remove the Horizon container from the build as the application init is not complete so will throw errors. (This will take a few minutes the first time)
 
    ```sh
    docker-compose up --scale horizon=0 -d --build
@@ -262,4 +262,4 @@ This code base for this repository's code is distributed under the MIT License. 
 
 ## Support
 
-Although we provide this code free and open source, rConfig v6 is based on a professional subscription arrangement. You may open issues in the issue section here at githunb, but rConfig Professional subscribers should open a ticket via our normal support channels.
+Although we provide this code free and open source, rConfig v6 is based on a professional subscription arrangement. You may open issues in the issue section here at github, but rConfig Professional subscribers should open a ticket via our normal support channels.
