@@ -10,7 +10,7 @@ https://github.com/mohammadain/laravel-docker-cron/blob/master/Dockerfile -->
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/rconfig/-rconfig6-docker">
+  <a href="https://github.com/rconfig/rconfig6-docker">
     <img src="https://www.rconfig.com/images/new_logos/blue_logos/artwork_blue_horizontal_Artboard_1_96px.png" alt="Logo" >
   </a>
 
@@ -22,17 +22,17 @@ https://github.com/mohammadain/laravel-docker-cron/blob/master/Dockerfile -->
     <a href="https://www.rconfig.com/docs"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/rconfig/-rconfig6-docker/#intro">Intro</a>
+    <a href="https://github.com/rconfig/rconfig6-docker/#intro">Intro</a>
     ·
-    <a href="https://github.com/rconfig/-rconfig6-docker/#setup">Installation</a>
+    <a href="https://github.com/rconfig/rconfig6-docker/#setup">Installation</a>
     ·
-    <a href="https://github.com/rconfig/-rconfig6-docker/#usage">Usage</a>
+    <a href="https://github.com/rconfig/rconfig6-docker/#usage">Usage</a>
     ·
-    <a href="https://github.com/rconfig/-rconfig6-docker/#contributing">Contributing</a>
+    <a href="https://github.com/rconfig/rconfig6-docker/#contributing">Contributing</a>
     ·
-    <a href="https://github.com/rconfig/-rconfig6-docker/#license">License</a>
+    <a href="https://github.com/rconfig/rconfig6-docker/#license">License</a>
     ·
-    <a href="https://github.com/rconfig/-rconfig6-docker/#support">Support</a>
+    <a href="https://github.com/rconfig/rconfig6-docker/#support">Support</a>
   </p>
 </div>
 
