@@ -1,6 +1,6 @@
 FROM php:8.1-apache
 
-RUN apt-get update && apt-get install -y vim wget curl default-mysql-client
+RUN apt-get update && apt-get install -y vim wget curl default-mysql-client git
 
 RUN apt-get install -y software-properties-common
 
