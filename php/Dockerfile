@@ -1,14 +1,14 @@
 FROM php:8.1-apache
 
+# Installing dependencies
 RUN apt-get update && apt-get install -y vim wget curl default-mysql-client git
 
 RUN apt-get install -y software-properties-common
 
 RUN apt install -y g++ libicu-dev libpq-dev libzip-dev zip zlib1g-dev libcurl4-openssl-dev libonig-dev libgmp-dev libpng-dev libwebp-dev iputils-ping telnet ssh \
-    && docker-php-ext-install intl opcache pdo pdo_mysql mysqli zip fileinfo bcmath gmp zip curl mbstring gd \ 
-    && apt-get clean
-
-# Configure LDAP.
+    && docker-php-ext-install intl opcache pdo pdo_mysql mysqli zip fileinfo bcmath gmp zip curl mbstring gd 
+    
+# Configure LDAP
 RUN apt-get update \
     && apt-get install libldap2-dev -y \
     && rm -rf /var/lib/apt/lists/* \
@@ -17,8 +17,10 @@ RUN apt-get update \
 
 # Install pcntl
 RUN docker-php-ext-configure pcntl --enable-pcntl \
-    && docker-php-ext-install \
-    pcntl
+    && docker-php-ext-install pcntl
+
+# Clear cache
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /var/www/html/rconfig6/
 
