@@ -7,6 +7,7 @@ WORKDIR /var
 RUN touch /var/log/cron.log
 
 RUN apt-get update && apt-get install -y cron supervisor
+RUN docker-php-ext-install pdo pdo_mysql
 
 # Configure cron
 RUN crontab -l | { cat; echo "* * * * * cd /var/www/html/rconfig6/current && /usr/local/bin/php artisan schedule:run >> /var/log/cron.log 2>&1"; } | crontab -
