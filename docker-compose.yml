@@ -52,7 +52,7 @@ services:
     build:
       context: ./horizon
     ports:
-      - '${EXPOSED_HORIZON_PORT}:80'
+      - 80
     volumes:
       - ./src:/var/www/html/rconfig6
     restart: always
