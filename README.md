@@ -124,9 +124,6 @@ Your OS will need `git` installed to clone this repo. Internet access for the ho
 
    #EXPOSED PORTS
    EXPOSED_APP_PORT=8080
-   EXPOSED_DB_PORT=3307
-   EXPOSED_HORIZON_PORT=8081
-   EXPOSED_REDIS_PORT=7000
    ```
 
 If you are uncertain about any of the above, the most important items to change are the DB_PASSWORD and the RCONFIG_API_TOKEN
