@@ -52,6 +52,9 @@ Supported OS
 
 These scripts are not tested on Docker Desktop or Docker for Windows at the time of this commit.
 
+> **ℹ️ Information**<br>
+This repo contains docker setup files and intructions for rConfig V6 Professional only. You will need a download key to complete the build. Docker for V6 Core is coming soon.
+
 Of course, you may download or clone these files, and edit as you see fit. But you will need an rConfig v6 professional license to download rConfig v6 code base. This is available over at rconfig.com.
 
 Check out our docs `www.rconfig.com/docs` to learn more.
