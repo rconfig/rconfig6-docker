@@ -1,99 +1,38 @@
-<!-- References:
-https://www.twilio.com/blog/get-started-docker-laravel
-https://laravel-for-newbie.kejyun.com/en/advanced/scheduling/docker/
-https://github.com/mohammadain/laravel-docker-cron/blob/master/Dockerfile -->
+# rConfig6-Docker (DEPRECATED)
 
-<!-- Improved compatibility of back to top link: See: https://github.com/othneildrew/Best-README-Template/pull/73 -->
+**As of November 2024**, this project is no longer maintained. **rConfig6-Docker** is fully deprecated and will no longer be supported in the public repository. This notice does not affect customers with current subscription arrangements until the end of the term of those arrangements.
 
-<a name="readme-top"></a>
+**rConfig6-Docker** has been in development since 2022, and we are incredibly proud of its impact and value for network professionals and businesses worldwide.
 
-<!-- PROJECT LOGO -->
-<br />
-<div align="center">
-  <a href="https://github.com/rconfig/rconfig6-docker">
-    <img src="https://www.rconfig.com/images/rConfig_logos/blue_logos/artwork_blue_horizontal_Artboard%201_96px.png" alt="Logo" >
-  </a>
+However, we are pleased to announce the release of **rConfig v6 Docker**. This is a complete rewrite of the rConfig application, built on the latest technologies, and offers a more streamlined and efficient experience. **rConfig v6 Professional** is a paid subscription product available for purchase at [rConfig Professional](https://www.rconfig.com), and **rConfig v6 Core** is free and open source, available on the rConfig GitHub repository at [rConfig6 Core](https://github.com/rconfig/rconfig6-core).
 
-  <h3 align="center">rConfig v6 Docker Compose Repository</h3>
+To access the new **rConfig v6 Docker**, please visit our new repository here: [rConfig v6 Docker](https://github.com/rconfig/rconfig6docker).
 
-  <p align="center">
-    A repo for to setup containers for the purpose of running rConfig in Docker.
-    <br />
-    <a href="https://www.rconfig.com/docs"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/rconfig/rconfig6-docker/#intro">Intro</a>
-    ·
-    <a href="https://github.com/rconfig/rconfig6-docker/#setup">Installation</a>
-    ·
-    <a href="https://github.com/rconfig/rconfig6-docker/#usage">Usage</a>
-    ·
-    <a href="https://github.com/rconfig/rconfig6-docker/#contributing">Contributing</a>
-    ·
-    <a href="https://github.com/rconfig/rconfig6-docker/#license">License</a>
-    ·
-    <a href="https://github.com/rconfig/rconfig6-docker/#support">Support</a>
-  </p>
-</div>
+---
 
-<!-- Intro -->
+## ⚠️ Important Notice
 
-<a name="intro"></a>
+If you download and use the code from this repository, you are doing so **at your own risk**. **rConfig6-Docker** will no longer be updated or maintained. This code and repository will remain available for **historical purposes only**.
 
-## Intro
+---
 
-rConfig v6 is an enterprise grade Network Configuration Management (NCM) software package with superior NCM features and capabilities to help you easily manage configurations on large and small heterogenous networks. rConfig v6 is our flagship professional version of rConfig aimed at high value networks and business operations. rConfig v6 runs natively on many variants of Linux. Within this repo, we have developed docker compose files and related artifacts to allow our customers run rConfig v6 within a Docker environment.
+## Useful URLs
 
-Supported OS
+- [Docker Installation for CentOS/Rocky](https://docs.docker.com/engine/install/centos/)
+- [Manual Docker Compose Installation for CentOS/Rocky](https://docs.docker.com/compose/install/other/) (useful in case the previous installation fails)
 
-- Rocky Linux 8.4+
-- RHEL Linux 8.4+
-- CentOS Linux 8.4+
+---
 
-These scripts are not tested on Docker Desktop or Docker for Windows at the time of this commit.
+## Installation (Deprecated)
 
-> **ℹ️ Information**<br>
-This repo contains docker setup files and intructions for rConfig V6 Professional only. You will need a download key to complete the build. Docker for V6 Core is coming soon.
+### 1. Clone the Repository
 
-Of course, you may download or clone these files, and edit as you see fit. But you will need an rConfig v6 professional license to download rConfig v6 code base. This is available over at rconfig.com.
+First, clone the repository to a directory of your choosing:
 
-Check out our docs `www.rconfig.com/docs` to learn more.
+```sh
+cd /var/www/html
+git clone https://github.com/rconfig/rconfig6-docker.git
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- Installation -->
-
-<a name="setup"></a>
-
-## Installation
-
-We have made it super easy to get started with rConfig v6 on Docker. Follow the steps below to get started.
-
-### Prerequisites
-
-Some prerequisites are needed before you get started.
-
-- OS
-  - Any latest version of CentOS, RHEL, Rocky or Ubunutu
-- Docker
-  - Any latest version of Docker or Docker-CE
-  - Any latest version of Docker Compose
-
-Your OS will need `git` installed to clone this repo. Internet access for the host VM is assumed also - at least to github and rconfig.com.
-
-#### Useful URLS
-
-- [Docker installation for CentOS/ Rocky](https://docs.docker.com/engine/install/centos/)
-- [Manual Docker Compose installation for CentOS/ Rocky](https://docs.docker.com/compose/install/other/) (useful incase previous does not install it )
-
-### Installation
-
-1. Clone this repository to a directory of your choosing.
-
-   ```sh
-   cd /var/www/html
-   git clone https://github.com/rconfig/rconfig6-docker.git
-   ```
 
 2. Create top level .env file
 
